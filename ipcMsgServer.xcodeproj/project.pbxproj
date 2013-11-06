@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3507E4D41829C601000A807A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3507E4D31829C601000A807A /* main.c */; };
 		3507E4D61829C601000A807A /* ipcMsgServer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3507E4D51829C601000A807A /* ipcMsgServer.1 */; };
+		3507E4E11829C730000A807A /* libipcMsgLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3507E4E01829C730000A807A /* libipcMsgLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		3507E4D01829C601000A807A /* ipcMsgServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ipcMsgServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		3507E4D31829C601000A807A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3507E4D51829C601000A807A /* ipcMsgServer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ipcMsgServer.1; sourceTree = "<group>"; };
+		3507E4E01829C730000A807A /* libipcMsgLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libipcMsgLib.a; path = "../../../Library/Developer/Xcode/DerivedData/ipcMsgClients-bkdlctscazwayaeuwdrnflwjdjbv/Build/Products/Debug/libipcMsgLib.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3507E4E11829C730000A807A /* libipcMsgLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 		3507E4C71829C601000A807A = {
 			isa = PBXGroup;
 			children = (
+				3507E4E01829C730000A807A /* libipcMsgLib.a */,
 				3507E4D21829C601000A807A /* ipcMsgServer */,
 				3507E4D11829C601000A807A /* Products */,
 			);
@@ -195,6 +199,10 @@
 		3507E4DA1829C601000A807A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ipcMsgClients-bkdlctscazwayaeuwdrnflwjdjbv/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +210,10 @@
 		3507E4DB1829C601000A807A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ipcMsgClients-bkdlctscazwayaeuwdrnflwjdjbv/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -225,6 +237,7 @@
 				3507E4DB1829C601000A807A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
