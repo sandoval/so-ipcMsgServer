@@ -2,7 +2,7 @@
 //  main.c
 //  ipcMsgServer
 //
-//  Created by Daniel Sandoval on 05/11/2013.
+//  Created by Daniel Sandoval (09/0109899) and Pedro Salum (09/0139232) on 05/11/2013.
 //  Copyright (c) 2013 Departamento de Ciência da Computação - Universidade de Brasília. All rights reserved.
 //
 
