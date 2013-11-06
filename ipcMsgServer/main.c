@@ -47,7 +47,7 @@ void treatSigint() {
 }
 
 void entryMessageHandler(message* msg) {
-    printf("[SERVER] Handling entryMessage\n");
+    //printf("[SERVER] Handling entryMessage\n");
     message response;
     response.mdata.destination = msg->mdata.source;
     response.mdata.referencedMessageId = msg->mdata.messageId;
@@ -57,9 +57,9 @@ void entryMessageHandler(message* msg) {
     } else {
         response.mdata.text[0] = 'n';
     }
-    printf("[SERVER] entryMessage check\n");
+    //printf("[SERVER] entryMessage check\n");
     sendMessage(&response);
-    printf("[SERVER] Client %d connected: %c\n", msg->mdata.source, response.mdata.text[0]);
+    //printf("[SERVER] Client %d connected: %c\n", msg->mdata.source, response.mdata.text[0]);
 }
 
 void *entryManager(void *threadid) {
@@ -68,7 +68,7 @@ void *entryManager(void *threadid) {
 }
 
 void exitMessageHandler(message* msg) {
-    printf("[SERVER] Handling exitMessage\n");
+    //printf("[SERVER] Handling exitMessage\n");
     message response;
     response.mdata.destination = msg->mdata.source;
     response.mdata.referencedMessageId = msg->mdata.messageId;
@@ -78,9 +78,9 @@ void exitMessageHandler(message* msg) {
     } else {
         response.mdata.text[0] = 'n';
     }
-    printf("[SERVER] exitMessage check\n");
+    //printf("[SERVER] exitMessage check\n");
     sendMessage(&response);
-    printf("[SERVER] Client %d disconnected: %c\n", msg->mdata.source, response.mdata.text[0]);
+    //printf("[SERVER] Client %d disconnected: %c\n", msg->mdata.source, response.mdata.text[0]);
 }
 
 void *exitManager(void *threadid) {
@@ -89,7 +89,7 @@ void *exitManager(void *threadid) {
 }
 
 void printMessageHandler(message* msg) {
-    printf("[SERVER] Handling printMessage\n");
+    //printf("[SERVER] Handling printMessage\n");
     message response;
     response.mdata.destination = msg->mdata.source;
     response.mdata.referencedMessageId = msg->mdata.messageId;
@@ -100,7 +100,7 @@ void printMessageHandler(message* msg) {
     } else {
         response.mdata.text[0] = 'n';
     }
-    printf("[SERVER] printMessage check\n");
+    //printf("[SERVER] printMessage check\n");
     sendMessage(&response);
 }
 
